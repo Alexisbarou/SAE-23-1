@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+{% block body %}
+<html>
+    <head>
+    <style>
+    .h1{
+        color: #FFFFFF;
+    }
+    </style>
+    </head>
+    <body>
+    <h1>Bonjour {{ nom }}, merci pour votre commande. Vous pouvez déposer vos VHS quand vous le souhaitez dans notre boutique (horaire sur l'onglet "Boutique"). À bientôt
+    </h1>
+    <h2> Votre commande : <b>{{ resultat1 }} {{ resultat2 }} {{ resultat3 }} {{ resultat4 }}</b> Prix : <b>{{ prix }} € </b>
+    </h2>
+    </body>
+</html>
+{% endblock %}

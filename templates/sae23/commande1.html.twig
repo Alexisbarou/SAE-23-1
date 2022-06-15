@@ -1,0 +1,77 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    <head>
+        <style>
+        body{
+            color : #FFFFFF;
+        }
+        .block {
+            display: block;
+            width: 100%;
+            border: none;
+            background-color: rgb(0, 255, 179);
+            color: rgb(4, 12, 41);
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .block:hover {
+            background-color: rgb(26, 185, 206);
+            color: white;
+        }
+
+        .fondhome{
+            outline-style: solid;
+            border: 1px solid black;
+            outline-color: white;
+            outline-width: thin;
+            border-radius: 8px;
+        }
+        /*Bouton formulaire*/
+        input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+        background-color: #45a049;
+        }
+        </style>
+    </head>
+<body>
+    <div class="container">
+        <div class="fondhome">
+            <form action="/recap1" method="post">
+                <fieldset>
+                    <legend>Formule "Basic" :</legend>
+                    <p> Vous avez choisi la formule "Basic". Cocher les cases pour ajouter des options : </p>
+                    <div>
+                        <input type="checkbox" id="cle" value='Fichiers sur clé USB 64Go' name = "cle">
+                        <label for="cle">Fichiers sur clé USB 64Go --> 5€</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="fichier" value='Fichiers au format MP4' name = "fichier">
+                        <label for="fichier">Fichiers au format MP4 --> 3€</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="troisheures" value='Convertir VHS (180 min, nombre de cassette ilimité)' name = "troisheures">
+                        <label for="troisheures">Convertir VHS (180 min) --> 5€ (nombre de cassette ilimité)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="quatreheures" value='Convertir VHS (240 min, nombre de cassette ilimité)' name = "quatreheures">
+                        <label for="quatreheures">Convertir VHS (240 min) --> 7€ (nombre de cassette ilimité)</label>
+                    </div>
+                        <input type="submit" name="submit" recapvalue="Submit">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+{% endblock %}

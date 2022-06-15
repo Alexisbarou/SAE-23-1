@@ -1,0 +1,42 @@
+{% extends "base.html.twig" %}
+{% block body %}
+  <head>
+    <style>
+      .block {
+        display: block;
+        width: 100%;
+        border: none;
+        background-color: rgb(0, 255, 179);
+        color: rgb(4, 12, 41);
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 8px;
+      }
+
+      .block:hover {
+        background-color: rgb(26, 185, 206);
+        color: white;
+      }
+
+      .fondhome{
+        outline-style: solid;
+        border: 1px solid black;
+        outline-color: white;
+        outline-width: thin;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="fondhome">
+        <h1 style="font-size:2vw;"> AB Numérisation - alexis.barou@abnumerisation.fr - 06 30 53 92 76</h1><br>
+        <h2 style="font-size:1.7vw;"> Alexis est très heureux de vous proposer ces services pour sauver vos souvenirs d'enfance ou de vos parents en support numérique (lisible sur PC ou TV)
+        N'hésitez-pas à voir nos offres et nous rendre visite dans notre boutique au 564 Rue d'Anse à Villefranche-sur-Saône</h2><br>
+        <button class="block" onclick="window.location.href = 'http://127.0.0.1:8000/commande'; ">Pour en savoir plus sur nos prestations</button>
+      </div>
+    </div>
+  </body>
+{% endblock %}

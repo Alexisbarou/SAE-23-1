@@ -2,18 +2,41 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <title>{% block title %}Site Alexis Barou{% endblock %}</title>
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="bootstrap.css">
+        <link rel="shortcut icon" href="photocontact.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
+        <img class="image" src="logo.png" style="width:20%">
+        <img class="image" src="logo2.jpg" style="width:50%">
     </head>
     <body>
+        <div class="topnav" id="myTopnav">
+            <a href="/" class="active"><i class="fa fa-fw fa-home"></i>Accueil</a>
+            <a href="/commande"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Commander</a>
+            <a href="/boutique"><i class="fa fa-map-marker" aria-hidden="true"></i> Boutique</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
         {% block body %}{% endblock %}
+        <footer>
+            <p style="font-size:2vw;">© Juin 2022 - Alexis Barou</p>
+        </footer>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
     </body>
 </html>
